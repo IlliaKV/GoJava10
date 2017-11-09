@@ -2,6 +2,7 @@ package practicalwork1;
 import java.util.Scanner;
 
 public class consolegraphics {
+
     public static void drawLine(int x, char c){
         for(int i=0;i<x;i++)
         System.out.print(c);
@@ -22,5 +23,19 @@ public class consolegraphics {
         char c = inputC();
         int x = inputX();
         drawLine(x, c);
+	}
+    public static void drawrect (int y, char c)
+    {
+        for (int i = 0; i < y; i++) {
+            System.out.println ("########");
+
+        }
+
     }
+
 }
+
+
+        
+
+
