@@ -1,6 +1,7 @@
 package practicalwork1;
 
 public class Main {
+
     public static void main(String[] args) {
         String task2 = "        /\\\n" +
                 "       /  \\\n" +
