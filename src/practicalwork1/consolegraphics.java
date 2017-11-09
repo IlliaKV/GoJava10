@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 public class consolegraphics {
 
-    public static void drawLine(int x, char c){
+    public static void drawLine(int x, char c, int color){
+        String ANSI_RESET = "\u001B[0m";
         for(int i=0;i<x;i++)
-        System.out.print(c);
+        System.out.print((char) 27 + "[" + color + "m" + c + ANSI_RESET);
     }
     public static char inputC(){
         System.out.print("Введите символ: ");
@@ -14,7 +15,7 @@ public class consolegraphics {
         return c;
     }
     public static int inputX(){
-        System.out.print("Введите целое число: ");
+        System.out.print("Введите целое число(для цвета 30-31): ");
         Scanner in = new Scanner(System.in);
         int x = in.nextInt();
         return x;
@@ -23,18 +24,17 @@ public class consolegraphics {
         char c = inputC();
         int x = inputX();
         int y = inputX();
-        drawrect(x,y, c);
+        int color = inputX();
+        drawrect(x,y, c, color);
 	}
-    public static void drawrect (int x,int y, char c)
+    public static void drawrect (int x,int y, char c, int color)
     {
         for (int i = 0; i < y; i++) {
-            drawLine(x,c);
+            drawLine(x,c, color);
             System.out.println();
 
         }
-
     }
-
 }
 
 
