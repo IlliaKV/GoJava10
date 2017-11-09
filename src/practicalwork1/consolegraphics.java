@@ -22,12 +22,13 @@ public class consolegraphics {
     public static void main(String[] args) {
         char c = inputC();
         int x = inputX();
-        drawLine(x, c);
+        drawrect(x, c);
 	}
     public static void drawrect (int y, char c)
     {
         for (int i = 0; i < y; i++) {
-            System.out.println ("########");
+            drawLine(y,c);
+            System.out.println();
 
         }
 
