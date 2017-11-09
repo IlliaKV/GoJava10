@@ -9,7 +9,7 @@ public class consolegraphics {
     public static char queryChar(){
         System.out.print("Введите символ: ");
         Scanner in = new Scanner(System.in);
-        char c = in.nextLine().charAt(0);;
+        char c = in.nextLine().charAt(0);
         return c;
     }
     public static void main(String[] args) {
