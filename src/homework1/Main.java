@@ -27,5 +27,7 @@ public class Main {
                 "за время каникул. Но я верю, что следующее лето тоже будет незабываемым!\n" +
                 "Источник: http://uchim.org/sochineniya/kak-ya-provel-leto";
         System.out.print(howIspentSummer);
+
+
     }
 }
