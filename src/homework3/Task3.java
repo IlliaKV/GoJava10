@@ -51,20 +51,20 @@ public class Task3 {
 
 //**************************************************************************************
 
-        int maxCountOfIdentical = 0;
-        int minCountOfIdentical = 999;
+        int maxCountOfIdentical = Integer.MIN_VALUE;//было 0
+        int minCountOfIdentical = Integer.MAX_VALUE;//было 999
         for(int i:array){
-            int tempElementCheck = 0;
+            int countElementCheck = 0;
             for(int j:array){
                 if(i == j){
-                    tempElementCheck++;
+                    countElementCheck++;
                 }
             }
-            if(maxCountOfIdentical < tempElementCheck){
-                maxCountOfIdentical = tempElementCheck;
+            if(maxCountOfIdentical < countElementCheck){
+                maxCountOfIdentical = countElementCheck;
             }
-            if(minCountOfIdentical > tempElementCheck && tempElementCheck > 1){
-                minCountOfIdentical = tempElementCheck;
+            if(minCountOfIdentical > countElementCheck && countElementCheck > 1){
+                minCountOfIdentical = countElementCheck;
             }
         }
 
