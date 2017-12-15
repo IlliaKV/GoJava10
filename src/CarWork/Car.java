@@ -5,7 +5,7 @@ import practicalwork5.Circle;
 import java.util.Date;
 
 public class Car {
-    String      dateProduction;             //дата производства (неизменна после создания объекта)
+    final static String dateProduction = "12.12.2017";             //дата производства (неизменна после создания объекта)
     String      engineType;
     double      maxSpeed;                   //максимальная скорость машины (если она новая)
     double      accelerationTime;           // время разгона до 100км/ч
@@ -17,13 +17,12 @@ public class Car {
 
     int         countWheels;
 
-    public Car(String dateProduction){
-        this(dateProduction, "Бензиновый", 180, 30, 5, 3, 90);
+    public Car(){
+        this("Бензиновый", 180, 30, 5, 3, 90);
     }
 
-    public Car(String dateProduction, String engineType, double maxSpeed, double accelerationTime,
+    public Car(String engineType, double maxSpeed, double accelerationTime,
                int passengerCapacity, int numberPassengersAtMoment, double currentSpeed){
-        this.dateProduction             = dateProduction;
         this.engineType                 = engineType;
         this.maxSpeed                   = maxSpeed;
         this.accelerationTime           = accelerationTime;
@@ -46,23 +45,23 @@ public class Car {
     }
 
     public void addPassenger(){
-        this.numberPassengersAtMoment++;
+        numberPassengersAtMoment++;
     }
 
     public void removePassenger(){
-        this.numberPassengersAtMoment--;
+        numberPassengersAtMoment--;
     }
 
     public void removeAllPassenger(){
-        this.numberPassengersAtMoment   = 0;
+        numberPassengersAtMoment   = 0;
     }
 
-    public String getDoorByIndex(int index){
-        return carDoors[index].doorStatus;
+    public boolean getDoorByIndex(int index){
+        return carDoors[index].isDoorStatus();
     }
 
     public double getWheelByIndex(int index){
-        return carWheels[index].wheelStatus;
+        return carWheels[index].getWheelStatus();
     }
 
     public void removeAllWheels(){
@@ -72,7 +71,7 @@ public class Car {
     }
 
     public void addWhells(int X){
-        this.countWheels += X;
+        countWheels += X;
         carWheels   = new CarWheel[countWheels];
         carDoors    = new CarDoor[countWheels];
 
@@ -87,8 +86,8 @@ public class Car {
         double maxEraseWheel       = 1.0;
 
         for(int i=0; i<countWheels; i++) {
-            if(carWheels[i].wheelStatus < maxEraseWheel){
-                maxEraseWheel = carWheels[i].wheelStatus;
+            if(carWheels[i].getWheelStatus() < maxEraseWheel){
+                maxEraseWheel = carWheels[i].getWheelStatus();
             }
         }
 

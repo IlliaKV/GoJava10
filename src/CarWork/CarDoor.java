@@ -1,47 +1,55 @@
 package CarWork;
 
 public class CarDoor {
-    String doorStatus;
-    String windowStatus;
+    private boolean doorStatus;
+    private boolean windowStatus;
 
     public CarDoor(){
-        this("закрыто", "закрыто");
+        this(false, false);
     }
 
-    public CarDoor(String doorStatus, String windowStatus){
+    public CarDoor(boolean doorStatus, boolean windowStatus){
         this.doorStatus     = doorStatus;
         this.windowStatus   = windowStatus;
     }
 
     public void openDoor(){
-        this.doorStatus     = "открыто";
+        doorStatus     = true;
     }
 
     public void closeDoor(){
-        this.doorStatus    = "закрыто";
+        doorStatus    = false;
     }
 
     public void openCloseDoor(){
-        if (this.doorStatus == "открыто") this.doorStatus     = "закрыто";
-        else this.doorStatus = "открыто";
+        if (isDoorStatus()) doorStatus     = false;
+        else doorStatus = true;
     }
 
     public void openWindow(){
-        this.windowStatus   = "открыто";
+        windowStatus   = true;
     }
 
     public void closeWindow(){
-        this.windowStatus  = "закрыто";
+        windowStatus  = false;
     }
 
     public void openCloseWindow(){
-        if (this.windowStatus == "открыто") this.windowStatus   = "закрыто";
-        else this.windowStatus = "открыто";
+        if (isWindowStatus()) windowStatus   = false;
+        else windowStatus = true;
     }
 
     public void showCarDoorStatus(){
         System.out.println("Данные об объекте CarDoor:" +
-                "\n- дверь " + doorStatus +
-                "\n- окно " + windowStatus);
+                "\n- дверь " + isDoorStatus() +
+                "\n- окно " + isWindowStatus());
+    }
+
+    public boolean isDoorStatus() {
+        return doorStatus;
+    }
+
+    public boolean isWindowStatus() {
+        return windowStatus;
     }
 }
