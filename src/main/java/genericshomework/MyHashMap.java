@@ -58,7 +58,7 @@ public class MyHashMap<T, K> {
             return false;
         }
     }
-
+/*
     public T put(T key, K value) {
         // return putVal(hash(key), key, value, false, true);
         int h;
@@ -106,7 +106,8 @@ public class MyHashMap<T, K> {
         afterNodeInsertion(evict);
         return null;
     }
-
+*/
+/*
     final Node<T, K>[] resize() {
         Node<T, K>[] oldTab = table;
         int oldCap = (oldTab == null) ? 0 : oldTab.length;
@@ -180,7 +181,8 @@ public class MyHashMap<T, K> {
         }
         return newTab;
     }
-
+*/
+/*
     static final class TreeNode<T, K> extends LinkedHashMap.Entry<T, K> {
         TreeNode<T, K> parent;  // red-black tree links
         TreeNode<T, K> left;
@@ -192,9 +194,6 @@ public class MyHashMap<T, K> {
             super(hash, key, val, next);
         }
 
-        /**
-         * Returns root of tree containing this node.
-         */
         final TreeNode<T, K> root() {
             for (TreeNode<T, K> r = this, p; ; ) {
                 if ((p = r.parent) == null)
@@ -203,4 +202,5 @@ public class MyHashMap<T, K> {
             }
         }
     }
+    */
 }

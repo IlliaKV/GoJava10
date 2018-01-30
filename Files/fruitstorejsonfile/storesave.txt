@@ -1,0 +1,1 @@
+{"fruits":[{"date":"11/01/2018","price":80.0,"shelfLife":12,"type":"Pear"},{"date":"12/01/2018","price":75.0,"shelfLife":15,"type":"Mandarin"},{"date":"13/01/2018","price":40.0,"shelfLife":9,"type":"Blackberry"}]}
