@@ -13,11 +13,11 @@ public class Main {
             System.out.println("Thread name: "+Thread.currentThread().getName());
             System.out.println("Thread ID: "+Thread.currentThread().getId());
 
-//            System.out.println("Thread is main=" + isThreadMain(Thread.currentThread())+"\n");
+//            System.out.println("Thread is websitedownloaderFXwindow=" + isThreadMain(Thread.currentThread())+"\n");
 
-            if(Thread.currentThread().getName().equals("main"))
-                System.out.println("it is main thread");
-            else System.out.println("it is not main thread");
+            if(Thread.currentThread().getName().equals("websitedownloaderFXwindow"))
+                System.out.println("it is websitedownloaderFXwindow thread");
+            else System.out.println("it is not websitedownloaderFXwindow thread");
 
             System.out.println("");
         };
