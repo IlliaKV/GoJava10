@@ -29,13 +29,13 @@ public class WaterSimulation extends Application{
             @Override
             public void handle(MouseEvent mouseEvent) {
                 for(int i = 0; i < heightArray; i++) {
-                    if (1 + (i*getSizeSquare()) > mouseEvent.getY() && 1 + (i*getSizeSquare()) + getSizeSquare() < mouseEvent.getY()) {
-                        for (int j = 0; j < widthArray; j++) {
-
-                        }
+                    if (1 + (i*getSizeSquare()) < mouseEvent.getY() && 1 + (i*getSizeSquare()) + getSizeSquare() > mouseEvent.getY()) {
+                        System.out.println("mouse click detected! " + mouseEvent.getSource() + " i = " + i);
+//                        for (int j = 0; j < widthArray; j++) {
+//
+//                        }
                     }
                 }
-                System.out.println("mouse click detected! " + mouseEvent.getSource());
             }
         });
 
